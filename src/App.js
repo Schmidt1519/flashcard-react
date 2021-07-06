@@ -7,8 +7,8 @@ import CreateCardForm from './components/CreateCardFrom/createCardForm';
 
 function App() {
 
-  const [collections, setCollections] = useState({});
-  const [cards, setCards] = useState({});
+  const [collections, setCollections] = useState([]);
+  const [cards, setCards] = useState([]);
   // const [currentCollection, setCurrentCollection] = useState({});
 
   useEffect(() => {
@@ -43,8 +43,12 @@ function App() {
   return (
     <div>
       <h1> Collections: </h1>
-        {/* <ul>{ collections.map(collection=>(
-            <li>{collection.title}</li>))} </ul> */}
+        <ul>
+          {collections.map(collection =>
+            <li key={collection.id}>{collection.title}</li>
+          )}
+        </ul>
+    {/* <CollectionList collections={collections} /> */}
     <CreateCardForm collections={collections} cards={cards}/>
     </div>
   );
