@@ -3,13 +3,14 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import CreateCardForm from './components/CreateCardFrom/createCardForm';
-
+import CollectionsList from './components/CollectionsList/collectionsList';
+import CardsList from './components/CardsList/cardsList';
 
 function App() {
 
   const [collections, setCollections] = useState([]);
   const [cards, setCards] = useState([]);
-  // const [currentCollection, setCurrentCollection] = useState({});
+  // const [currentCollectionId, setCurrentCollectionId] = useState([]);
 
   useEffect(() => {
     getAllCollections();
@@ -42,14 +43,9 @@ function App() {
 
   return (
     <div>
-      <h1> Collections: </h1>
-        <ul>
-          {collections.map(collection =>
-            <li key={collection.id}>{collection.title}</li>
-          )}
-        </ul>
-    {/* <CollectionList collections={collections} /> */}
-    <CreateCardForm collections={collections} cards={cards}/>
+      <CollectionsList collections={collections} />
+      <CardsList cards={cards} />
+      <CreateCardForm collections={collections} cards={cards}/>
     </div>
   );
 }

@@ -7,15 +7,18 @@ const CreateCardForm = (props) => {
     const { values, handleChange, handleSubmit } = useForm(createCard);
     // const [term, setTerm] = useState("");
     // const [definition, setDefinition] = useState("");
-    const [collection, setCollection] = useState("");
+    // const [collection, setCollection] = useState(props.collections);
+    const [card, setCard] = useState(props.cards)
 
-    createCard = async () => {
+    console.log(props)  // test
+
+    async function createCard() {
         const addCard = {...values};
-        console.log(addCard);
+        console.log(addCard);  // test
         try{
             console.log("create a card request is called")  // test
-            let response = await axios.post(`http://127.0.0.1:8000/collection/card/${props.collection}/new/`, addCard)
-        setCollection(response.data)
+            let response = await axios.post(`http://127.0.0.1:8000/collection/card/1/new/`, addCard) // fix collection ID
+        setCard(response.data)
         }
         catch (err) {
             console.log(err);
@@ -24,6 +27,7 @@ const CreateCardForm = (props) => {
 
     return (
         <div>
+            <h1>Add card: </h1>
             <form onSubmit={handleSubmit}>
                 <label>
                     Term: 
