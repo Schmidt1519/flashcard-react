@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
+import CardViewer from '../CardViewer/cardViewer';
 
 function CardsList(props) {
     console.log(props);
 
-    // const [collections, setCollection] = useState(props.collections)
+    const [collections, setCollection] = useState(props.collections)
 
     let cardsList = props.cards.map(card => { 
         return <li key={card.id}>
@@ -17,6 +18,7 @@ function CardsList(props) {
         <div>
             <h1> Cards: </h1>
                 <ul>
+                    <CardViewer cards={props.cards}/>
                     {cardsList}
                 </ul>  
         </div>

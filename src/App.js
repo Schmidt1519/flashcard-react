@@ -5,14 +5,16 @@ import axios from 'axios';
 import CreateCardForm from './components/CreateCardFrom/createCardForm';
 import CollectionsList from './components/CollectionsList/collectionsList';
 import CardsList from './components/CardsList/cardsList';
+import CardViewer from './components/CardViewer/cardViewer';
 import EditCard from './components/EditCard/editCard';
+
 
 function App() {
 
   const [collections, setCollections] = useState([]);
   const [cards, setCards] = useState([]);
   const [collectionIsSelected, setCollectionIsSelected] = useState(null);
-
+  
 
   useEffect(() => {
     getAllCollections();
@@ -48,9 +50,9 @@ function App() {
     <React.Fragment>
     <div>
       <h1 className='text-center'>Flashcards</h1>
-      <CollectionsList collections={collections} getAllCards={getAllCards}/>
+      <CollectionsList collections={collections} cards={cards} getAllCards={getAllCards}/>
       <CardsList cards={cards} />
-
+      {/* <CardViewer cards={cards} /> */}
       <CreateCardForm collections={collections} cards={cards} collectionIsSelected={collectionIsSelected} />
       {/* <EditCard collections={collections} cards={cards}/> */}
     </div>
