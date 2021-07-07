@@ -6,10 +6,9 @@ function CardViewer(props) {
     console.log(props)   // test
 
     if(props.cards.length === 0){
-        return(
-            <div></div>
-        )
+        return(null)
     }
+
     else{
         function goToNextCard(){
             console.log("go to next card beginning of function")
@@ -36,14 +35,16 @@ function CardViewer(props) {
         return(
             <div className='row row-spacer'>
                 <div className ='col-md-4'>
-                    <button onClick={() => goToNextCard()}>Previous Card</button>
+                    <button onClick={() => goToPreviousCard()}>Previous Card</button>
                 </div>
                 <div className='col-md-4'>
                     <h1>{props.cards[cardNumber].term}</h1>
                     <h2>{props.cards[cardNumber].definition}</h2>
+                    {/* <h3>{props.cards[cardNumber].id}/{props.cards.length}</h3> */}
+                    <h3>{cardNumber + 1}/{props.cards.length}</h3>
                 </div>
                 <div className='col-md-4'>
-                    <button onClick={() => goToPreviousCard()}>Next Card</button>
+                    <button onClick={() => goToNextCard()}>Next Card</button>
                 </div>
             </div>
     )}
