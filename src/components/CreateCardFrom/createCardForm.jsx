@@ -1,7 +1,7 @@
+// import React, { useState, useEffect } from 'react';
 import React, { useState } from 'react';
 import useForm from '../UseForm/useForm';
 import axios from 'axios'
-
 
 const CreateCardForm = (props) => {
     const { values, handleChange, handleSubmit } = useForm(createCard);
@@ -10,7 +10,7 @@ const CreateCardForm = (props) => {
     console.log(props)  // test
 
     async function createCard() {
-        const addCard = {...values};
+        const addCard = {...values, ['collection']: props.collectionIsSelected};
         console.log(addCard);  // test
         try{
             console.log("create a card request is called")  // test
@@ -43,16 +43,6 @@ const CreateCardForm = (props) => {
                         name="definition"
                         onChange={handleChange}
                         value={values.definition}
-                        required={true}
-                    />
-                </label>
-                <label>
-                    Collection: 
-                    <input 
-                        type="text" 
-                        name="collection"
-                        onChange={handleChange}
-                        value={values.collection}
                         required={true}
                     />
                 </label>

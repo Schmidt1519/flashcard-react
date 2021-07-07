@@ -5,8 +5,6 @@ import axios from 'axios';
 import CreateCardForm from './components/CreateCardFrom/createCardForm';
 import CollectionsList from './components/CollectionsList/collectionsList';
 import CardsList from './components/CardsList/cardsList';
-import EditCard from './components/EditCard/editCard';
-
 
 function App() {
 
@@ -49,9 +47,18 @@ function App() {
     <div>
       <h1 className='text-center'>Flashcards</h1>
       <CollectionsList collections={collections} cards={cards} getAllCards={getAllCards}/>
-      <CardsList cards={cards} />
-      <CreateCardForm collections={collections} cards={cards} collectionIsSelected={collectionIsSelected} />
-      {/* <EditCard collections={collections} cards={cards}/> */}
+      <CardsList cards={cards} getAllCollections={getAllCollections} 
+                        getAllCards={getAllCards}/>
+    </div>
+    <div>
+      {collectionIsSelected &&
+      <CreateCardForm collections={collections} cards={cards} 
+                collectionIsSelected={collectionIsSelected}/>}
+    </div>
+    <div>
+      {collectionIsSelected == null &&
+        (<h2 className='text-center'>Please choose a collection of Flashcards</h2>)  
+      }
     </div>
   
     </React.Fragment>

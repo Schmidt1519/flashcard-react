@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import EditCard from '../EditCard/editCard';
 
 function CardViewer(props) {
 
@@ -40,11 +41,13 @@ function CardViewer(props) {
                 <div className='col-md-4'>
                     <h1>{props.cards[cardNumber].term}</h1>
                     <h2>{props.cards[cardNumber].definition}</h2>
-                    {/* <h3>{props.cards[cardNumber].id}/{props.cards.length}</h3> */}
                     <h3>{cardNumber + 1}/{props.cards.length}</h3>
                 </div>
                 <div className='col-md-4'>
                     <button onClick={() => goToNextCard()}>Next Card</button>
+                </div>
+                <div>
+                    <EditCard />
                 </div>
             </div>
     )}
