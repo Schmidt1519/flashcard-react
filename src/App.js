@@ -5,16 +5,18 @@ import axios from 'axios';
 import CreateCardForm from './components/CreateCardFrom/createCardForm';
 import CollectionsList from './components/CollectionsList/collectionsList';
 import CardsList from './components/CardsList/cardsList';
+import EditCard from './components/EditCard/editCard';
 
 function App() {
 
   const [collections, setCollections] = useState([]);
   const [cards, setCards] = useState([]);
-  // const [currentCollectionId, setCurrentCollectionId] = useState([]);
+  const [collectionIsSelected, setCollectionIsSelected] = useState(null);
+
 
   useEffect(() => {
     getAllCollections();
-    getAllCards();
+    // getAllCards(collections.id);
   }, []);
   
   let getAllCollections = async () => {
@@ -29,12 +31,13 @@ function App() {
     }
   }
 
-  let getAllCards = async () => {
+  let getAllCards = async (id) => {
     try{
       console.log("get all Cards request is called")  // test
-      let response = await axios.get('http://127.0.0.1:8000/collection/card/');
+      let response = await axios.get(`http://127.0.0.1:8000/collection/card/${id}/`);
       console.log(response.data)  // test
       setCards(response.data)
+      setCollectionIsSelected(id);
     }
     catch(err) {
       console.log(err);
@@ -42,11 +45,17 @@ function App() {
   }
 
   return (
+    <React.Fragment>
     <div>
-      <CollectionsList collections={collections} />
+      <h1 className='text-center'>Flashcards</h1>
+      <CollectionsList collections={collections} getAllCards={getAllCards}/>
       <CardsList cards={cards} />
-      <CreateCardForm collections={collections} cards={cards}/>
+
+      <CreateCardForm collections={collections} cards={cards} collectionIsSelected={collectionIsSelected} />
+      {/* <EditCard collections={collections} cards={cards}/> */}
     </div>
+  
+    </React.Fragment>
   );
 }
 

@@ -3,9 +3,10 @@ import React, { useState } from 'react';
 function CollectionsList(props) {
     console.log(props);
 
-    let collectionList = props.collections.map(function(collection){ 
-        return <li key={collection.id}>
-            {collection.title}</li>
+    // [selectedCollection, setSelectedCollection] = useState([props.collections.id[0]])
+
+        let collectionList = props.collections.map(collection => {
+        return <li onClick={() => props.getAllCards(collection.id)} key={collection.id}>{collection.title}</li>  // add onclick trigger 
     });
 
     return(

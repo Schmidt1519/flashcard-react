@@ -3,9 +3,14 @@ import React, { useState } from 'react';
 function CardsList(props) {
     console.log(props);
 
-    let cardsList = props.cards.map(function(card){ 
+    // const [collections, setCollection] = useState(props.collections)
+
+    let cardsList = props.cards.map(card => { 
         return <li key={card.id}>
             {card.term} - {card.definition}</li>
+
+            // filter cards here by collection id OR filter on back end
+
     });
 
     return(
