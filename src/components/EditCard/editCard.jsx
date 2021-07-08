@@ -7,11 +7,6 @@ const EditCard = (props) => {
     const { values, handleChange, handleSubmit } = useForm(() => editCard(props.cards.id, values));
     const [card, setCard] = useState(props.cards);
 
-    console.log(props)  // shows all 4 collections, current cards and current collectionIsSelected id.
-    console.log(props.cards)  // shows whichever collection I am currently viewing.
-    console.log(card)  // always shows whichever collection is originally click on, even after switching.
-    console.log(card.id)  // undefined
-
     async function editCard(id, values) {
         const editFlashcard = {collection: props.cards.collection, ...values};
         console.log(editFlashcard);  // test

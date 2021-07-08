@@ -1,16 +1,16 @@
 import React from 'react';
+import './collectionsList.css';
 
 function CollectionsList(props) {
     console.log(props);
 
-    // [selectedCollection, setSelectedCollection] = useState([props.collections.id[0]])
-
         let collectionList = props.collections.map(collection => {
-        return <li onClick={() => props.getAllCards(collection.id)} key={collection.id}>{collection.title}</li>  // add onclick trigger 
+        return <li className="collections-list-item" onClick={() => props.getAllCards(collection.id)} 
+                key={collection.id}>{collection.title}</li>
     });
 
     return(
-        <div>
+        <div className='collections-list'>
             <h1> Collections: </h1>
                 <ul>
                     {collectionList}

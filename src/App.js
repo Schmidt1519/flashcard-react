@@ -45,8 +45,9 @@ function App() {
   return (
     <React.Fragment>
     <div>
-      <h1 className='text-center'>Flashcards</h1>
-      <CollectionsList collections={collections} cards={cards} getAllCards={getAllCards}/>
+      <h1 className='flashcards-header'>Flashcards</h1>
+      <CollectionsList collections={collections} cards={cards} getAllCards={getAllCards}
+                      collectionIsSelected={collectionIsSelected}/>
       <CardsList collections={collections}cards={cards}
                   getAllCollections={getAllCollections} getAllCards={getAllCards}
                   collectionIsSelected={collectionIsSelected}/>

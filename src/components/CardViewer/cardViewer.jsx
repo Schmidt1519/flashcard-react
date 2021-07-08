@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import EditCard from '../EditCard/editCard';
+import './cardViewer.css';
 
 function CardViewer(props) {
 
@@ -39,7 +40,7 @@ function CardViewer(props) {
         console.log(props.cards)
 
         return(
-            <div className='row row-spacer'>
+            <div className='card-viewer'>
                 <div className ='col-md-4'>
                     <button onClick={() => goToPreviousCard()}>Previous Card</button>
                 </div>
