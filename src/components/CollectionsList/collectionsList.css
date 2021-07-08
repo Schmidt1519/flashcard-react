@@ -27,11 +27,6 @@
     margin-right: auto;
 }
 
-.collections-list ul:active {
-    background-color: yellow;
-  }
-
-
-li.collections-list-item {
+li.collections-list-item-active {
     background-color: lightgreen;
 }

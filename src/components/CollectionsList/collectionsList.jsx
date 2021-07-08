@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './collectionsList.css';
 
 function CollectionsList(props) {
     console.log(props);
-
         let collectionList = props.collections.map(collection => {
-        return <li className="collections-list-item" onClick={() => props.getAllCards(collection.id)} 
-                key={collection.id}>{collection.title}</li>
+            if(props.collectionIsSelected == collection.id){ 
+                console.log("match");      
+                    return <li className="collections-list-item-active"
+                        onClick={() => props.getAllCards(collection.id)} 
+                        key={collection.id}>{collection.title}</li>
+            }
+            else{
+                return <li className="collections-list-item"
+                    onClick={() => props.getAllCards(collection.id)} 
+                    key={collection.id}>{collection.title}</li> 
+            }
     });
 
     return(
