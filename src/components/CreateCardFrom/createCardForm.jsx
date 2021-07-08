@@ -10,7 +10,7 @@ const CreateCardForm = (props) => {
     console.log(props)  // test
 
     async function createCard() {
-        const addCard = {...values, ['collection']: props.collectionIsSelected};
+        const addCard = {...values, collection: props.collectionIsSelected};
         console.log(addCard);  // test
         try{
             console.log("create a card request is called")  // test

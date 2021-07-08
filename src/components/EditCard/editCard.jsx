@@ -1,27 +1,23 @@
 import React, { useState } from 'react';
 import useForm from '../UseForm/useForm';
 import axios from 'axios'
-
-// change to modal?
+import CardViewer from '../CardViewer/cardViewer';
 
 const EditCard = (props) => {
-    const { values, handleChange, handleSubmit } = useForm(editCard);
-    // const [term, setTerm] = useState("");
-    // const [definition, setDefinition] = useState("");
-    // const [collection, setCollection] = useState(props.collections);
-    const [card, setCard] = useState(props.cards)
+    const { values, handleChange, handleSubmit } = useForm(() => editCard(props.cards.id, values));
+    const [card, setCard] = useState(props.cards);
 
-    console.log(props)  // test
+    console.log(props)  // shows all 4 collections, current cards and current collectionIsSelected id.
+    console.log(props.cards)  // shows whichever collection I am currently viewing.
+    console.log(card)  // always shows whichever collection is originally click on, even after switching.
+    console.log(card.id)  // undefined
 
-    async function editCard() {
-        const editFlashcard = {...values, ['collection']: props.collectionIsSelected};
+    async function editCard(id, values) {
+        const editFlashcard = {collection: props.cards.collection, ...values};
         console.log(editFlashcard);  // test
         try{
             console.log("edit a card request is called")  // test
-
-            // fix collection ID in Axios Post request!!
-
-            let response = await axios.put(`http://127.0.0.1:8000/collection/card/${values.collection}/update/`, editFlashcard)
+            let response = await axios.put(`http://127.0.0.1:8000/collection/card/${id}/update/`, editFlashcard)
         setCard(response.data)
         }
         catch (err) {
@@ -38,7 +34,7 @@ const EditCard = (props) => {
                     <input 
                         type="text" 
                         name="term"
-                        // placeholder={cards.term}
+                        placeholder={props.cards.term}
                         onChange={handleChange}
                         value={values.term}
                         required={true}
@@ -49,20 +45,9 @@ const EditCard = (props) => {
                     <input 
                         type="text" 
                         name="definition"
-                        // placeholder={cards.definition}
+                        placeholder={props.cards.definition}
                         onChange={handleChange}
                         value={values.definition}
-                        required={true}
-                    />
-                </label>
-                <label>
-                    Collection: 
-                    <input 
-                        type="text" 
-                        name="collection"
-                        // placeholder={cards.collection}
-                        onChange={handleChange}
-                        value={values.collection}
                         required={true}
                     />
                 </label>

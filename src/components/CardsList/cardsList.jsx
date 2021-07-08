@@ -13,7 +13,8 @@ function CardsList(props) {
         <div>
             {/* <h1> Cards: </h1> */}
                 <ul>
-                    <CardViewer cards={props.cards}/>
+                    <CardViewer cards={props.cards} collections={props.collections}
+                                collectionIsSelected={props.collectionIsSelected}/>
                 </ul>  
         </div>
     )

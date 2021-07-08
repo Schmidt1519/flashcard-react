@@ -19,6 +19,7 @@ function CardViewer(props) {
                 tempCardNumber = 0;
             }
             setCardNumber(tempCardNumber)
+            console.log(tempCardNumber)
             console.log("go to next card end of function")
         }
 
@@ -30,8 +31,12 @@ function CardViewer(props) {
                 tempCardNumber = props.cards.length - 1
             }
             setCardNumber(tempCardNumber)
+            console.log(tempCardNumber)
             console.log("go to previous card end of function")
         }
+        
+        // console.log(cards)
+        console.log(props.cards)
 
         return(
             <div className='row row-spacer'>
@@ -47,7 +52,8 @@ function CardViewer(props) {
                     <button onClick={() => goToNextCard()}>Next Card</button>
                 </div>
                 <div>
-                    <EditCard />
+                    <EditCard cards={props.cards[cardNumber]} collections={props.collections}
+                            collectionIsSelected={props.collectionIsSelected}/>
                 </div>
             </div>
     )}
