@@ -1,32 +1,35 @@
 .collections-list {
     padding-top: 1%;
+    margin-left: 1%;
+    margin-top: 1%;
     text-align: center;
     display: block;
     width: 15%;
-    /* margin-left: auto;
-    margin-right: auto; */
     color: black;
     background-color: white;
-    border-style: groove;
+    border-style: solid;
     border-width: thin;
     border-radius: 10px;
     border-color: black;
-    /* padding-bottom: 15px; */
     box-sizing: border-box;
 }  
 
 .collections-list h1 {
-    font-size: x-large;
+    font-size: xx-large;
+    color: rgb(37, 104, 158);
 }
 
 .collections-list ul {
     list-style-type: none;
+    font-size: large;
     text-align: left;
     width: 50%;
     margin-left: auto;
     margin-right: auto;
+    color: rgb(37, 104, 158);
 }
 
 li.collections-list-item-active {
-    background-color: lightgreen;
+    background-color: rgb(203, 241, 253);
+    border-radius: 15%;
 }

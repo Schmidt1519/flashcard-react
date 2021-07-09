@@ -1,3 +1,62 @@
-/* .card-viewer {
+.card-viewer {
     background-color: lightgray;
-} */
+    text-align: center;
+    display: block;
+}
+
+.card-viewer h1 {
+    font-size: xx-large;
+    color: rgb(37, 104, 158);
+}
+
+.card-viewer h2 {
+    font-size: large;
+    color: rgb(37, 104, 158);
+}
+
+.card-viewer h3 {
+    font-size: medium;
+    color: rgb(37, 104, 158);
+}
+.btn-outline-primary {
+    border-width: thin;
+    border-color: rgb(37, 104, 158);
+    color: rgb(37, 104, 158);
+    font-weight: 500;
+    margin-top: 20%;
+    margin-left: 40%;
+}
+
+.flashcard {
+    border-style: solid;
+    border-width: thin;
+    border-radius: 10px;
+    border-color: black;
+    box-sizing: border-box;
+    height: 40vh;
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:focus {
+    color: #fff;
+    font-weight: bold;
+    background-color: rgb(37, 104, 158);
+    border-color: rgb(37, 104, 158);
+}
+
+.edit-card {
+    text-align: center;
+    display: flex;
+    float: right;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    background-color: rgb(37, 104, 158);
+    border-style: groove;
+    border-width: thin;
+    border-radius: 10px;
+    border-color: black;
+    border-radius: 15px;
+    padding-bottom: 15px;
+}
+

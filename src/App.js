@@ -59,7 +59,7 @@ function App() {
     </div>
     <div>
       {collectionIsSelected == null &&
-        (<h2 className='text-center'>Please choose a collection of Flashcards</h2>)  
+        (<h2 className='choose-collection'>Please choose a collection of Flashcards</h2>)  
       }
     </div>
   

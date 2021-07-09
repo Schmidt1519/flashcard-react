@@ -40,19 +40,21 @@ function CardViewer(props) {
         console.log(props.cards)
 
         return(
-            <div className='card-viewer'>
+            <div className='row row-spacer'>
                 <div className ='col-md-4'>
-                    <button onClick={() => goToPreviousCard()}>Previous Card</button>
+                    <button class="btn btn-outline-primary" onClick={() => goToPreviousCard()}>Previous Card</button>
                 </div>
                 <div className='col-md-4'>
-                    <h1>{props.cards[cardNumber].term}</h1>
+                    <div className="flashcard">
+                    <h1>{props.cards[cardNumber].term} </h1>
                     <h2>{props.cards[cardNumber].definition}</h2>
-                    <h3>{cardNumber + 1}/{props.cards.length}</h3>
+                    <h3>{cardNumber + 1} / {props.cards.length}</h3>
+                    </div>
                 </div>
                 <div className='col-md-4'>
-                    <button onClick={() => goToNextCard()}>Next Card</button>
+                    <button class="btn btn-outline-primary" onClick={() => goToNextCard()}>Next Card</button>
                 </div>
-                <div>
+                <div className='edit-card'>
                     <EditCard cards={props.cards[cardNumber]} collections={props.collections}
                             collectionIsSelected={props.collectionIsSelected}/>
                 </div>

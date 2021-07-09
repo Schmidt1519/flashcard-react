@@ -1,11 +1,17 @@
 // import React, { useState, useEffect } from 'react';
 import React, { useState } from 'react';
 import useForm from '../UseForm/useForm';
-import axios from 'axios'
+import axios from 'axios';
+import './createCardForm.css';
 
 const CreateCardForm = (props) => {
     const { values, handleChange, handleSubmit } = useForm(createCard);
-    const [card, setCard] = useState(props.cards)
+    const [card, setCard] = useState(props.cards);
+
+    // const intiialValuesState = {
+    //     term: '',
+    //     definition: '',
+    // }
 
     console.log(props)  // test
 
@@ -23,8 +29,8 @@ const CreateCardForm = (props) => {
     }
 
     return (
-        <div>
-            <h1>Add card: </h1>
+        <div className="add-card">
+            <h1>Add Card: </h1>
             <form onSubmit={handleSubmit}>
                 <label>
                     Term: 
@@ -32,7 +38,7 @@ const CreateCardForm = (props) => {
                         type="text" 
                         name="term"
                         onChange={handleChange}
-                        value={values.term}
+                        value={values.term || '' }
                         required={true}
                     />
                 </label>
@@ -42,7 +48,7 @@ const CreateCardForm = (props) => {
                         type="text" 
                         name="definition"
                         onChange={handleChange}
-                        value={values.definition}
+                        value={values.definition || '' }
                         required={true}
                     />
                 </label>

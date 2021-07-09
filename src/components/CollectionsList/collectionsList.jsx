@@ -5,7 +5,7 @@ function CollectionsList(props) {
     console.log(props);
         let collectionList = props.collections.map(collection => {
             if(props.collectionIsSelected == collection.id){ 
-                console.log("match");      
+                console.log("match");  // remove
                     return <li className="collections-list-item-active"
                         onClick={() => props.getAllCards(collection.id)} 
                         key={collection.id}>{collection.title}</li>
@@ -13,7 +13,7 @@ function CollectionsList(props) {
             else{
                 return <li className="collections-list-item"
                     onClick={() => props.getAllCards(collection.id)} 
-                    key={collection.id}>{collection.title}</li> 
+                    key={collection.id}>{collection.title}</li>
             }
     });
 

@@ -31,7 +31,7 @@ const EditCard = (props) => {
                         name="term"
                         placeholder={props.cards.term}
                         onChange={handleChange}
-                        value={values.term}
+                        value={values.term || '' }
                         required={true}
                     />
                 </label>
@@ -42,7 +42,7 @@ const EditCard = (props) => {
                         name="definition"
                         placeholder={props.cards.definition}
                         onChange={handleChange}
-                        value={values.definition}
+                        value={values.definition || '' }
                         required={true}
                     />
                 </label>

@@ -1,5 +1,17 @@
+/* * {
+    font-family: ;
+} */
+
 .flashcards-header {
     text-align: center;
     font-style: italic;
+    color: rgb(37, 104, 158);
     background-color: lightgray;
+    
+}
+
+.choose-collection {
+    text-align: center;
+    color: rgb(37, 104, 158);
+    font-size: x-large;
 }
