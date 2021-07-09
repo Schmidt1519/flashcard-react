@@ -73,8 +73,7 @@
 .edit-card {
     text-align: center;
     width: 25%;
-    margin-left: auto;
-    margin-right: auto;
+    height: 18%;
     color: white;
     background-color: rgb(37, 104, 158);
     border-style: groove;
@@ -83,5 +82,8 @@
     border-color: black;
     border-radius: 15px;
     padding-bottom: 15px;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
 }
 
