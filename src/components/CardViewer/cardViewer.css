@@ -28,26 +28,30 @@
 }
 
 .flashcard {
-    border-style: solid;
-    border-width: thin;
+    color: rgb(37, 104, 158);
+    border-width: 15px;
+    border-style: ridge;
+    Border-color: rgb(203, 241, 253);
     border-radius: 10px;
-    border-color: black;
     box-sizing: border-box;
     height: 40vh;
+    margin-bottom: 5%;
 }
 
 .flashcard h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
+    color: rgb(37, 104, 158);
 }
 
 .flashcard h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     font-size: 20px;
-    padding-top: 5%;
+    padding-top: 7%;
     padding-left: 5%;
     padding-right: 5%;
+    color: rgb(37, 104, 158);
 }
 
 .flashcard h3 {
@@ -57,7 +61,7 @@
     padding-top: 15%;
     padding-left: 5%;
     padding-right: 5%;
-    
+    color: rgb(37, 104, 158);
 }
 
 .btn-outline-primary:hover, .btn-outline-primary:focus {
@@ -69,8 +73,7 @@
 
 .edit-card {
     text-align: center;
-    display: flex;
-    float: right;
+    
     width: 25%;
     margin-left: auto;
     margin-right: auto;
