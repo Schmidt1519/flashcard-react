@@ -8,18 +8,9 @@ const CreateCardForm = (props) => {
     const { values, handleChange, handleSubmit } = useForm(createCard);
     const [card, setCard] = useState(props.cards);
 
-    // const intiialValuesState = {
-    //     term: '',
-    //     definition: '',
-    // }
-
-    console.log(props)  // test
-
     async function createCard() {
         const addCard = {...values, collection: props.collectionIsSelected};
-        console.log(addCard);  // test
         try{
-            console.log("create a card request is called")  // test
             let response = await axios.post(`http://127.0.0.1:8000/collection/card/${props.collectionIsSelected}/new/`, addCard)
             setCard(response.data)
         }
@@ -52,7 +43,7 @@ const CreateCardForm = (props) => {
                         required={true}
                     />
                 </label>
-                <button class="btn btn-light" type="submit">Add Card</button>
+                <button className="btn btn-light" type="submit">Submit</button>
             </form>
         </div>
     )

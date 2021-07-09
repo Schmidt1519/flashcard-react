@@ -2,7 +2,6 @@ import React from 'react';
 import CardViewer from '../CardViewer/cardViewer';
 
 function CardsList(props) {
-    console.log(props);
 
     props.cards.map(card => { 
         return <li key={card.id}>

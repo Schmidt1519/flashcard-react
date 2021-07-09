@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import useForm from '../UseForm/useForm';
 import axios from 'axios'
-import CardViewer from '../CardViewer/cardViewer';
 import './editCard.css'
 
 const EditCard = (props) => {
@@ -10,9 +9,7 @@ const EditCard = (props) => {
 
     async function editCard(id, values) {
         const editFlashcard = {collection: props.cards.collection, ...values};
-        console.log(editFlashcard);  // test
         try{
-            console.log("edit a card request is called")  // test
             let response = await axios.put(`http://127.0.0.1:8000/collection/card/${id}/update/`, editFlashcard)
         setCard(response.data)
         }
@@ -22,7 +19,7 @@ const EditCard = (props) => {
     }
 
     return (
-        <div class="edit-card-form">
+        <div className="edit-card-form">
             <h1>Edit card: </h1>
             <form onSubmit={handleSubmit}>
                 <label>
@@ -47,7 +44,7 @@ const EditCard = (props) => {
                         required={true}
                     />
                 </label>
-                <button class="btn btn-light" type="submit">Edit Card</button>
+                <button className="btn btn-light" type="submit">Submit</button>
             </form>
         </div>
     )
