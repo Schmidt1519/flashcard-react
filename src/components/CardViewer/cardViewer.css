@@ -27,6 +27,12 @@
     margin-left: 40%;
 }
 
+.btn-outline-primary:hover, .btn-outline-primary:focus {
+    color: #fff;
+    font-weight: bold;
+    background-color: rgb(37, 104, 158);
+    border-color: rgb(37, 104, 158);
+}
 .flashcard {
     color: rgb(37, 104, 158);
     border-width: 15px;
@@ -58,22 +64,14 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     font-size: 15px;
-    padding-top: 15%;
+    padding-top: 12%;
     padding-left: 5%;
     padding-right: 5%;
     color: rgb(37, 104, 158);
 }
 
-.btn-outline-primary:hover, .btn-outline-primary:focus {
-    color: #fff;
-    font-weight: bold;
-    background-color: rgb(37, 104, 158);
-    border-color: rgb(37, 104, 158);
-}
-
 .edit-card {
     text-align: center;
-    
     width: 25%;
     margin-left: auto;
     margin-right: auto;

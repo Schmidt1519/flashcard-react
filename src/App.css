@@ -12,3 +12,8 @@
     color: rgb(37, 104, 158);
     font-size: x-large;
 }
+
+.app {
+    background: linear-gradient(rgb(240, 240, 240), white);
+    background-repeat: no-repeat;
+}

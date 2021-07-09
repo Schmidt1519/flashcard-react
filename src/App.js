@@ -44,7 +44,7 @@ function App() {
 
   return (
     <React.Fragment>
-    <div>
+    <div className="app">
       <h1 className='flashcards-header'>Flashcards</h1>
       <CollectionsList collections={collections} cards={cards} getAllCards={getAllCards}
                       collectionIsSelected={collectionIsSelected}/>
