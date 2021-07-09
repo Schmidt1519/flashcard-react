@@ -1,0 +1,20 @@
+
+.edit-card-form h1 {
+    font-size: x-large;
+    padding-top: 1%;
+}
+
+.btn-light {
+    border-width: thin;
+    border-color: rgb(37, 104, 158);
+    color: rgb(37, 104, 158);
+    font-weight: 500;
+}
+
+.btn-light:hover, .btn-light:focus {
+    color: #fff;
+    font-weight: bold;
+    background-color: rgb(37, 104, 158);
+    border-color: black;
+    border-width: thin;
+}

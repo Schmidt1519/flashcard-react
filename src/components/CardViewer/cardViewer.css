@@ -18,6 +18,7 @@
     font-size: medium;
     color: rgb(37, 104, 158);
 }
+
 .btn-outline-primary {
     border-width: thin;
     border-color: rgb(37, 104, 158);
@@ -33,6 +34,7 @@
     background-color: rgb(37, 104, 158);
     border-color: rgb(37, 104, 158);
 }
+
 .flashcard {
     color: rgb(37, 104, 158);
     border-width: 15px;
@@ -86,4 +88,3 @@
     bottom: 5%;
     right: 5%;
 }
-

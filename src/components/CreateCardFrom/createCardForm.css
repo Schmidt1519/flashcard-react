@@ -1,3 +1,4 @@
+
 .add-card {
     text-align: center;
     width: 25%;
@@ -13,4 +14,28 @@
     position: absolute;
     bottom: 5%;
     left: 5%;
+}
+
+.add-card h1 {
+    font-size: x-large;
+    padding-top: 1%;
+}
+
+input {
+    margin-bottom: 3%;
+}
+
+.btn-light {
+    border-width: thin;
+    border-color: rgb(37, 104, 158);
+    color: rgb(37, 104, 158);
+    font-weight: 500;
+}
+
+.btn-light:hover, .btn-light:focus {
+    color: #fff;
+    font-weight: bold;
+    background-color: rgb(37, 104, 158);
+    border-color: black;
+    border-width: thin;
 }

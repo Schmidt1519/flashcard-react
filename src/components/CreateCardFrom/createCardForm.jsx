@@ -33,8 +33,8 @@ const CreateCardForm = (props) => {
             <h1>Add Card: </h1>
             <form onSubmit={handleSubmit}>
                 <label>
-                    Term: 
-                    <input 
+                    Term:
+                    <input
                         type="text" 
                         name="term"
                         onChange={handleChange}
@@ -44,7 +44,7 @@ const CreateCardForm = (props) => {
                 </label>
                 <label>
                     Definition: 
-                    <input 
+                    <input
                         type="text" 
                         name="definition"
                         onChange={handleChange}
@@ -52,7 +52,7 @@ const CreateCardForm = (props) => {
                         required={true}
                     />
                 </label>
-                <button type="submit">Add Card</button>
+                <button class="btn btn-light" type="submit">Add Card</button>
             </form>
         </div>
     )

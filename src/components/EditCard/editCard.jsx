@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import useForm from '../UseForm/useForm';
 import axios from 'axios'
 import CardViewer from '../CardViewer/cardViewer';
+import './editCard.css'
 
 const EditCard = (props) => {
     const { values, handleChange, handleSubmit } = useForm(() => editCard(props.cards.id, values));
@@ -21,7 +22,7 @@ const EditCard = (props) => {
     }
 
     return (
-        <div>
+        <div class="edit-card-form">
             <h1>Edit card: </h1>
             <form onSubmit={handleSubmit}>
                 <label>
@@ -46,7 +47,7 @@ const EditCard = (props) => {
                         required={true}
                     />
                 </label>
-                <button type="submit">Edit Card</button>
+                <button class="btn btn-light" type="submit">Edit Card</button>
             </form>
         </div>
     )
