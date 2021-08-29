@@ -1,8 +1,6 @@
 # Flashcards (frontend)
 Flashcards React frontend that consumes a web API created with Django Rest.
 
-Backend: https://github.com/Schmidt1519/flashcards-django-rest
-
 ![Image of Flashcards](https://github.com/Schmidt1519/flashcard-react/blob/main/Flashcards-screenshot.jpg)
 
 ## Description
@@ -15,3 +13,6 @@ Flashcards is a CRUD application allowing the user to select a collection from a
 * CSS
 * Axios
 * Postman
+
+## Related
+Link to Backend: https://github.com/Schmidt1519/flashcards-django-rest
