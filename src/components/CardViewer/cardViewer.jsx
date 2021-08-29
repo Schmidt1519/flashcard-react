@@ -27,7 +27,6 @@ function CardViewer(props) {
                 tempCardNumber = props.cards.length - 1
             }
             setCardNumber(tempCardNumber)
-
         }
 
         return(
