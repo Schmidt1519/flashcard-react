@@ -1,5 +1,5 @@
 # Flashcards (frontend)
-Flashcards React frontend that consumes a web API created with Django Rest.
+Flashcards React frontend that consumes a web API created with Django Rest Framework.
 
 ![Image of Flashcards](https://github.com/Schmidt1519/flashcard-react/blob/main/Flashcards-screenshot.jpg)
 
